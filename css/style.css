@@ -1,0 +1,86 @@
+@charset "utf-8";
+body {
+	margin:0;
+	padding:0;
+	width:100%;
+	background:top center;
+	-webkit-overflow-scrolling:touch;
+}
+html {
+	padding:0;
+	margin:0;
+}
+
+/* меню------------------------------------*/
+.navbar{
+	font-weight: 800;
+	font-size: 14px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: #0098e0; 
+}
+.logo{
+	margin-left: 30px;
+	width: 75px;
+	height: 55px; 
+}
+/* меню------------------------------------*/
+.info{
+	margin-top: 86px;
+}
+.row{
+
+	 border-radius: 10px;
+	 background-color: white;
+}
+/*-------------------------------------*/
+.right-image {
+    float: left;
+    border-radius: 10px;
+    margin: 10px 5px 5px 15px;
+    background: #f0f0f0;
+}
+.right-image figcaption {
+    margin: 0 auto 5px; 
+   }
+.right-image img{
+	width: 230px;
+}
+.footer {
+	background: #222222;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 4px;
+}
+table thead tr {
+	color: #ffffff;
+	font-weight: bold;
+}
+table thead tr td {
+	border-radius: 4px 4px 0 0;
+	background: #2e82c3;
+}
+table tbody tr td {
+	border: 1px solid #2e82c3;
+	border-radius: 4px;
+	background: #cbdfef;
+}
+table tbody tr td:hover {
+	background: #a2c3dd;
+	transition-duration: 0.2s;
+}
+
+#datepicker{
+	color: #000;
+}
+/*-------------------------------------------*/
+.mySlides{
+	display: none;
+}

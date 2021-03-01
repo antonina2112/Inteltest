@@ -1,6 +1,4 @@
 @charset "utf-8";
-@import "table.css";
-
 body {
 	margin:0;
 	padding:0;
@@ -36,12 +34,6 @@ html {
 	 background-color: white;
 }
 /*-------------------------------------*/
-.example {
-	width:200;
-	padding:5%;
-	margin:10px 12px 15px 5px;
-	border:2px solid green;
-}
 .right-image {
     float: left;
     border-radius: 10px;
@@ -62,7 +54,7 @@ html {
 	padding-bottom: 10px;
 }
 
-/*table {
+table {
 	width: 100%;
 	border-collapse: separate;
 	border-spacing: 4px;
@@ -83,7 +75,7 @@ table tbody tr td {
 table tbody tr td:hover {
 	background: #a2c3dd;
 	transition-duration: 0.2s;
-}*/
+}
 
 #datepicker{
 	color: #000;

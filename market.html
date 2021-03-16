@@ -7,11 +7,31 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/bootstrap.min.css" rel="stylesheet"/>
 <link href="css/jquery-ui.css" rel="stylesheet">
-<link  href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
-<script src="js/jquery.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/Slider.js"></script>
+<link  href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">s
 <script src="js/Date.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function() {
+    $("#accordion").accordion();
+});
+$( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+} );
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );
+</script>
 </head>
 
 <body style="background-color: #ebebeb">
@@ -53,53 +73,47 @@
         </div>
       </div>
     </div>
-    
-	<div class="container info">
-      	<div class="row">
-        	<div class="col-lg-12 col-md-12 col-sm-12">
-        		<h2>Processors</h2>
-        		<table>
- 					<thead>
-    					<tr>
-      						<td>Name</td>
-      						<td>Description</td>
-      						<td>Price</td>
-    					</tr>
-  					</thead>
-  					<tbody>
-   						<tr>
-					    	<td>Intel Core i9-10900K Processor</td>
-					      	<td>Intel Core i9-10900K производится по стандарту 14-нм техпроцесса, имеет 10 ядер, которые работают в 20 потоков со штатной тактовой частотой 3.7 ГГц, 4.8 ГГц в режиме Turbo Boost. Объем кэш-памяти 3 уровня равен 20 МБ. Имеет 2-х канальный контроллер памяти DDR4.</td>
-					      	<td>16999 грн</td>
-    					</tr>
-    					<tr>
-					     	<td>INTEL CORE™ I5 10600KF</td>
-					     	<td>Intel Core i5-10600KF производится по стандарту 14-нм техпроцесса, имеет 6 ядер, которые работают в 12 потоков со штатной тактовой частотой 4.1 ГГц, 4.5 ГГц в режиме Turbo Boost. Объем кэш-памяти 3 уровня равен 12 МБ. Имеет 2-х канальный контроллер памяти DDR4.</td>
-					     	<td>7463 ГРН</td>
-					    </tr>
-    					<tr>
-						    <td>INTEL CORE™ I9 10940X</td>
-						    <td>Intel Core i9-10940X X-series — процесор для настільної платформи Intel LGA 2066. Цей процесор має 14 ядер, які працюють на штатній тактовій частоті 3.3 ГГц, 4.6 ГГц у режимі Turbo Boost і 4.8 ГГц у режимі Intel Turbo Boost Max 3.0. Серед особливостей варто виділити 4-кaнaльний контролер пам'яті DDR4 та розблокований множник.</td>
-						    <td>27668 ГРН</td>
-    					</tr>
-  					</tbody>
-              <script>
-              var a = 16999
-              var b = 7463
-              var c = 27668
-              var result = a + b + c
-              window.alert('a='+a+'; b='+b+'; c='+c+'; a+b+c=' + result)
-              </script>
-				</table>
-                <script type="text/javascript">
-          function call(){
-          alert("Зараз дана функція не працює(Метод вставки)")
-        } 
-        </script>
-        <button class="btn-search" type="button" onclick="call()">Buy</button>
-        	</div>
-      	</div>
+<div class="container info">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h2>Processors</h2>
+            <div id="accordion">
+                <h3>Intel Core i9-10900K Processor</h3>
+                <div>
+                    <p>
+                        Intel Core i9-10900K производится по стандарту 14-нм техпроцесса, имеет 10 ядер, которые работают в 20 потоков со штатной тактовой частотой 3.7 ГГц, 4.8 ГГц в режиме Turbo Boost. Объем кэш-памяти 3 уровня равен 20 МБ. Имеет 2-х канальный контроллер памяти DDR4.
+                    </p>
+                </div>
+                <h3>INTEL CORE™ I5 10600KF</h3>
+                <div>
+                    <p>
+                        Intel Core i5-10600KF производится по стандарту 14-нм техпроцесса, имеет 6 ядер, которые работают в 12 потоков со штатной тактовой частотой 4.1 ГГц, 4.5 ГГц в режиме Turbo Boost. Объем кэш-памяти 3 уровня равен 12 МБ. Имеет 2-х канальный контроллер памяти DDR4.
+                    </p>
+                </div>
+                <h3>INTEL CORE™ I9 10940X</h3>
+                <div>
+                    <p>
+                        Intel Core i9-10940X X-series — процесор для настільної платформи Intel LGA 2066. Цей процесор має 14 ядер, які працюють на штатній тактовій частоті 3.3 ГГц, 4.6 ГГц у режимі Turbo Boost і 4.8 ГГц у режимі Intel Turbo Boost Max 3.0. Серед особливостей варто виділити 4-кaнaльний контролер пам'яті DDR4 та розблокований множник.
+                    </p>
+                </div>
+            </div>
+            <div class="proc-filters">
+                <p>
+                    <label for="amount">Price range:</label>
+                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </p>
+                <div id="slider-range"></div>
+                <div style="margin: 10px 0px;">
+                    <button class="btn-search" type="button">Search</button>
+                </div>
+                <p>Delivery until: <input type="text" id="datepicker"></p>
+                <div style="margin: 10px 0px;">
+                    <button class="btn-search" type="button">Order</button>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
     <div class="container info">
       <div class="row" style="margin-bottom: 63px">
@@ -125,9 +139,6 @@
       </div>
       <div class="col-lg-3 col-md-2">
         <p>Design by Rudakova_Shelestiuk</p>
-      </div>
-      <div class="col-lg-2 col-md-2">
-      <p>Date: <input type="button" id="datepicker"></p>
       </div>
     </div>
   </div>

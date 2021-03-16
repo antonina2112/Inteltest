@@ -84,3 +84,34 @@ table tbody tr td:hover {
 .mySlides{
 	display: none;
 }
+#accordion{
+	float: left;
+	width: 70%;
+	margin: 0px 7px; 
+}
+.proc-filters{
+	float: left;
+	width: 25%
+}
+.weather{
+	float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.currency{
+	float: left;
+	width: 30%;
+	margin-left: 10px;
+	margin-right: 20px;
+    margin-top: 20px;
+}
+#timedate {
+  font: small-caps lighter 45px/100% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  text-align:left;
+  width: 30%;
+  color:#fff;
+  border-left: 3px solid #ed1f24;
+  float: left;
+  margin-top: 40px;
+  margin-left: 20px;
+}

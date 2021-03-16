@@ -1,0 +1,33 @@
+.masthead {
+    position: relative;
+    min-width: 400px;
+}
+.masthead-video {
+    width: 1130px;
+    z-index: 0;
+}
+
+.masthead-video-credit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    padding-right: 10px;
+    bottom: 10px;
+    text-decoration: none;
+    text-align: right;
+    line-height: 1.5;
+    -webkit-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+.masthead-video-credit span {
+    display: block;
+}
+.masthead-video-credit:hover {
+    opacity: 1;
+}
